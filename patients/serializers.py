@@ -38,6 +38,7 @@ class PatientSerializer(serializers.ModelSerializer):
 
 
 class TreatmentSerializer(serializers.ModelSerializer):
+    filterset_fields = ["patient", "status", "name"]
     class Meta:
         model = Treatment
         fields = [

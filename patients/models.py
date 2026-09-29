@@ -26,7 +26,7 @@ class Treatment(models.Model):
 
     patient = models.ForeignKey(
         Patient,
-        on_delete=models.CASCADE,
+        on_delete=models.PROTECT,
         related_name="treatments"
     )
     name = models.CharField(max_length=200)
